@@ -1,72 +1,77 @@
 
-import.java.util.Scanner
-public class pi
-{
+import java.util.Scanner;
 
-void addition(int a,int b){
-System.out.println("Enter first number:");
-a=sc.nextInt();
-System.out.println("Enter second number:");
-b=sc.nextInt();
-sc.close();
-int c=a+b;
-System.out.println("Sum:\t" +c);
-}
-void subtraction(int a,int b){
-System.out.println("Enter first number:");
-a=sc.nextInt();
-System.out.println("Enter second number:");
-b=sc.nextInt();
-sc.close();
-int f=a-b;
-System.out.println("Difference:\t" +f);
-}
-void division(int a,int b){
-int i;
-if(b != 0){
-System.out.println("Enter first number:");
-a=sc.nextInt();
-System.out.println("Enter second number:");
-b=sc.nextInt();
-sc.close();
-double i=a/b;
-System.out.println("Quotient:\t" +i);
-}
-else{
-System.out.println("Cannot divide by zero");
-}
-}
-void multiplication(int a,int b){
-int l;
-System.out.println("Enter first number:");
-a=sc.nextInt();
-System.out.println("Enter second number:");
-b=sc.nextInt();
-sc.close();
-int j=a*b+;
-System.out.println("Product:\t" +j);
-}
-void area of a rectangle(int length,int width);
-System.out.println("Enter length of the rectangle:");
-length=sc.nextInt();
-System.out.println("Enter width of the rectangle:");
-width=sc.nextInt();
-sc.close();
-int c=length*width;
-System.out.println("Area of the rectangle=:\t" +c);
-}
-void Area of circle(double radiuis){
-System.out.println("Enter radius of the circle:");
-double area=3.14159 * radius;
-System.out.println("Area of the circle=:/t" +area);
-}
-public static void main (String args[])
-{
-pi cd=new pi();
-cd.addition();
-}
-}
+public class Pi {
 
+    Scanner sc = new Scanner(System.in); 
+
+    void addition() {
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("Sum: " + c);
+    }
+
+    void subtraction() {
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+        int f = a - b;
+        System.out.println("Difference: " + f);
+    }
+
+    void division() {
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+        if (b != 0) {
+            double i = (double) a / b;
+            System.out.println("Quotient: " + i);
+        } else {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+
+    void multiplication() {
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+        int j = a * b;
+        System.out.println("Product: " + j);
+    }
+
+    void areaOfRectangle() {
+        System.out.println("Enter length of the rectangle:");
+        int length = sc.nextInt();
+        System.out.println("Enter width of the rectangle:");
+        int width = sc.nextInt();
+        int c = length * width;
+        System.out.println("Area of the rectangle: " + c);
+    }
+
+    void areaOfCircle() {
+        System.out.println("Enter radius of the circle:");
+        double radius = sc.nextDouble();
+        double area = 3.14159 * radius * radius;
+        System.out.println("Area of the circle: " + area);
+    }
+
+    public static void main(String[] args) {
+        Pi cd = new Pi();
+        cd.addition();        
+        cd.subtraction();
+        cd.multiplication();
+        cd.division();
+        cd.areaOfRectangle();
+        cd.areaOfCircle();
+        cd.sc.close();
+    }
+}
 
 
 
